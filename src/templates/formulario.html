@@ -1,0 +1,31 @@
+{% extends './layout.html' %}
+
+{% block titulo %}
+Formulario
+{% endblock %}
+
+{% block body %}
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form action="/guardar_visitantes" method ="post">
+        <h3>Deja tu comentario en este formulario</h3>
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre"/>
+        <label for="email">Correo Electrónico</label>
+        <input type="email" name="correo" id="email"/>
+        <label for="comentario">Comentario</label>
+        <input type="text" name="comentario" id="comentario"/>
+        <div class="button-formulario">
+            <button type="submit">Enviar mi comentario</button>
+        </div>
+        <br>
+        <center>
+        <button class="button-comentario"><a href="/" style="text-decoration: none;">Ir al inicio 🏠</a></button>
+        </center>
+       
+    </form>
+{% endblock %}
+
+

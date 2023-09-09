@@ -1,0 +1,431 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
+body{
+    background-color: #141414;
+}
+
+.titulo-equipo{
+    font-size:40px ;
+}
+
+.container{
+    width: 100vw;
+    height: 77vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.card{
+    position: relative;
+    height: 300px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Camilo */
+.card:nth-child(1){
+    background: linear-gradient(45deg, rgba(255,0,0,0.5), rgba(0,0,255,0.5));
+    filter: drop-shadow(0px 0px 20px red);
+}
+
+.card:nth-child(1)::after{
+    content: '';
+    position: absolute;
+    height: 290px;
+    width: 240px;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Lorena */
+.card:nth-child(2){
+    background: linear-gradient(45deg, rgba(255,0,234,0.8), rgba(140, 206, 223, 0.8));
+    filter: drop-shadow(0px 0px 20px rgb(0,255,255));
+}
+
+.card:nth-child(2)::after{
+    content: '';
+    position: absolute;
+    height: 290px;
+    width: 240px;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Jesus */
+.card:nth-child(3){
+    background: linear-gradient(45deg, rgba(0, 255, 76, 0.5), rgba(140, 206, 223, 0.8));
+    filter: drop-shadow(0px 0px 20px rgb(0, 255, 76));
+}
+
+.card:nth-child(3)::after{
+    content: '';
+    position: absolute;
+    height: 290px;
+    width: 240px;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.4);
+}
+
+
+/* Perfiles */
+.perfil{
+    position: absolute;
+    height: 240px;
+    width: 200px;
+    background-color: white;
+    transition: 400ms ease-in-out;
+    z-index: 1;
+}
+
+.perfil.one{
+    background: url(./img/Camilo.jpg);
+    background-size: 210px 240px;
+    
+}
+
+.card:hover .perfil.one{
+    transform: translateY(-40px) scale(0.75);
+    z-index: 3;
+}
+
+.card:hover .detalle{
+    transform: scale(1);
+    z-index: 2;
+}
+
+.perfil.two{
+    background: url(./img/Lorena.jpg);
+    background-size: 210px 240px;
+    
+}
+
+.card:hover .perfil.two{
+    transform: translateY(-40px) scale(0.75);
+    z-index: 3;
+}
+
+.card:hover .detalle{
+    transform: scale(1);
+    z-index: 2;
+}
+
+.perfil.three{
+    background: url(./img/Jesus.jpg);
+    background-size: 210px 240px;
+    
+}
+
+.card:hover .perfil.three{
+    transform: translateY(-40px) scale(0.75);
+    z-index: 3;
+}
+
+.card:hover .detalle{
+    transform: scale(1);
+    z-index: 2;
+}
+
+/*detalles*/
+
+.detalle{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+    transform: scale(0);
+    transition: 400ms ease-in-out;
+}
+
+.biografia button {
+    background-color: rgb(0, 0, 3);
+    color: white;
+    width: 120px;
+    height: 25px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.biografia button:hover {
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-widht:800px){
+    .container{
+        display: grid;
+    }
+}
+
+
+/*Footer*/
+
+.footer {
+    background-color: rgb(59, 57, 57);
+    color: white;
+    padding: 6px;
+}
+
+.button-comentario {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out;
+  }
+  
+.button-comentario:hover {
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/*********************************************************************************************/
+/*Error 404*/
+.error-404{
+
+    background-color: #000; 
+    color: #fff; 
+    text-align: center;
+    padding: 20px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    transition: box-shadow 0.3s; 
+}
+
+.error-404:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); 
+}
+
+/*************************************************************************************************/
+.background{
+    width: 430px;
+    height: 480px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+
+}
+
+.background .shape{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.shape:first-child{
+    background: linear-gradient(#1845AD, #23A2F6);
+    left: -80px;
+    top: -80px;
+}
+.shape:last-child{
+    background: linear-gradient(to right, #FF512F, #F09819);
+    right: -30px;
+    bottom: -80px;
+}
+
+form {
+    height: 520px;
+    width: 400px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top:50%;
+    left:50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    padding: 50px 35px;
+
+}
+
+form * {
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+form h3 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+input {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+::placeholder {
+    color: #E5E5E5;
+
+}
+
+.button-formulario button {
+    margin-top: 50px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: optional;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button-formulario-volver {
+    margin-top: 50px;
+    width: 100%;
+    background-color: #85b9d1;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: optional;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/****************************************************************************************/
+/* Estilos para el contenedor principal */
+
+.all-biography {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: linear-gradient(135deg, #000, #000 33.33%, #5a0505 33.33%, #bb1111dc 66.67%, #0631b185 66.67%);
+    padding: 20px;
+    color: #fff; /* Cambiamos el color del texto a blanco para que sea legible en el fondo oscuro */
+}
+
+/* Estilos para el contenedor del nombre y la foto */
+.name-perfil-camilo {
+    flex: 1;
+    text-align: center;
+}
+
+.name-perfil-camilo h1 {
+    font-size: 36px;
+    color: #6578e6;
+    margin-bottom: 10px;
+}
+
+.name-perfil-camilo h2 {
+    font-size: 24px;
+    color: #e71430;
+}
+
+
+.name-perfil-lore {
+    flex: 1;
+    text-align: center;
+}
+
+.name-perfil-lore h1 {
+    font-size: 36px;
+    color: #f173eb;
+    margin-bottom: 10px;
+}
+
+.name-perfil-lore h2 {
+    font-size: 24px;
+    color: #665ce9;
+}
+
+.name-perfil-jesus {
+    flex: 1;
+    text-align: center;
+}
+
+.name-perfil-jesus h1 {
+    font-size: 36px;
+    color: #93eeae;
+    margin-bottom: 10px;
+}
+
+.name-perfil-jesus h2 {
+    font-size: 24px;
+    color: #94a9e4;
+}
+
+/* Estilos para el contenedor de la sección de biografía */
+.content-biography {
+    flex: 2;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo con opacidad */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos para la sección "information" */
+.information {
+    flex: 1;
+}
+
+.information h2 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 14px;
+    font-weight: bold;
+}
+
+.information ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.information ul li {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Estilos para la sección "photo" */
+.photo {
+    flex: 1;
+    text-align: center;
+}
+
+.photo img {
+    max-width: 100%;
+    height: 90%;
+    width: 80%;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}

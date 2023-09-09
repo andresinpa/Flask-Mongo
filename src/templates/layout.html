@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}">
+
+    <title>{% block titulo %}{% endblock %}</title>
+
+</head>
+
+
+
+<body>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% set last_message = messages[-1] %}            
+            
+                <script>
+                    window.alert('{{ last_message[1] }}')
+                </script>
+                
+        {% endif %}
+    {% endwith %}
+    {% block body %}{% endblock %}
+
+    <footer>
+        <div class="footer">
+            <center>
+                {% block button_footer %} {% endblock %}
+            </center>
+        </div>
+    </footer>
+</body>
+
+
+</html>

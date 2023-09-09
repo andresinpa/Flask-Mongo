@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+
+{% block titulo %}Conócenos{% endblock %}
+{% block body %}
+<br>
+<center>
+    <h1 class="titulo-equipo">👨‍💻 Conoce más acerca del equipo 👨‍💻</h1>
+</center>
+<div class="container">
+    <div class="card">
+        <div class="perfil one"></div>
+        <div class="detalle">
+            <h2>Camilo Delgado</h2>
+            <h3>Administrador de BBDD</h3>
+            <div class="biografia">
+                <button><a href="/camilo" style="text-decoration: none;">Biografía</a></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="perfil two"></div>
+        <div class="detalle">
+            <h2>Lorena Rueda</h2>
+            <h3>Diseñadora UX/UI</h3>
+            <div class="biografia">
+                <button><a href="/lore" style="text-decoration: none;">Biografía</a></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="perfil three"></div>
+        <div class="detalle">
+            <h2>Jesus Infante</h2>
+            <h3>Desarrollador FullStack</h3>
+            <div class="biografia">
+                <button><a href="/jesus" style="text-decoration: none;">Biografía</a></button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block button_footer %}
+<button class="button-comentario"><a href="/comentarios" style="text-decoration: none;">Dejar un
+        comentario</a></button>
+{% endblock %}
